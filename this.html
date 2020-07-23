@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>this</title>
+</head>
+<body>
+    <h1>This is not confused anymore </h1>
+    <p onclick="this.innerText ='you clicked'">I am a pragraph. don't clik me</p>
+    <script>
+        const myObj = {
+            name:'xzy',
+            getFullname: function(){
+                console.log(this);
+                return 'Mr' + this.name;
+            }
+        }
+
+            // myObj.getFullname();
+
+            // const anotherObj = {
+            //     name: 'abc'
+            // }
+            // anotherObj.getFullname = myObj.getFullname;
+            // console.log(anotherObj.getFullname);
+
+            // myObj.getFullname();
+            // anotherObj.getFullname();
+
+            function add (a, b){
+                console.log(this);
+                return a + b;
+            }
+            add (12, 13);
+            anotherObj.sum = add;
+            anotherObj.sum();
+    </script>
+</body>
+</html>
